@@ -14,7 +14,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from core.config import settings
 from core.database import create_tables
 
+from routes.documents import router
+
 app = FastAPI(title=settings.app_name, debug=settings.debug)
+
+app.include_router(router)
 
 # Allows the React frontend (running on a different port/origin during
 # development) to call this API. Without this, the browser blocks requests
@@ -37,7 +41,9 @@ def on_startup() -> None:
     """
     create_tables()
 
-
+@app.get("/")
+def home():
+    return {"message":"Welcome to KnowledgeHub Backend!"}
 @app.get("/health")
 def health_check() -> dict[str, str]:
     """
