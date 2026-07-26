@@ -46,7 +46,7 @@ class Settings(BaseSettings):
 
     # --- LLM / Ollama (used by the future chat module) ---
     ollama_base_url: str = "http://localhost:11434"
-    ollama_model_name: str = "phi3:mini"
+    ollama_model: str = "qwen2.5:7b"
 
     # --- Chunking parameters (used by the future PDF ingestion module) ---
     chunk_size_tokens: int = 512
