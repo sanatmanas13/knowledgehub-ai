@@ -175,7 +175,7 @@ After uploading a PDF, the system extracts text, cleans it, creates semantic chu
 
 The system retrieves relevant document chunks and explains the taxonomy of deep learning techniques used in medical image analysis.
 
-![Taxonomy Demo](assets/taxonomy-demo.jpeg)
+![Taxonomy Demo](assets/taxonomy-demo.png)
 
 ---
 
@@ -183,7 +183,7 @@ The system retrieves relevant document chunks and explains the taxonomy of deep 
 
 KnowledgeHub AI compares CNN, RNN, GAN, LSTM, and Hybrid models by retrieving and combining information from multiple sections of the document.
 
-![Model Comparison](assets/comparison-demo.jpeg)
+![Model Comparison](assets/comparison-demo.png)
 
 ---
 
@@ -191,7 +191,7 @@ KnowledgeHub AI compares CNN, RNN, GAN, LSTM, and Hybrid models by retrieving an
 
 The application generates a comprehensive answer by retrieving context related to current challenges and future research directions in medical image analysis.
 
-![Challenges Demo](assets/challenges-demo.jpeg)
+![Challenges Demo](assets/challenges-demo.png)
 
 ---
 
