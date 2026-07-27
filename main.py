@@ -8,6 +8,8 @@ routers in api/v1/ in future modules, then included here with
 `app.include_router(...)`.
 """
 
+import logging
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -15,6 +17,13 @@ from core.config import settings
 from core.database import create_tables
 
 from routes.documents import router
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s: %(message)s"
+)
+
+logger = logging.getLogger(__name__)
 
 app = FastAPI(title=settings.app_name, debug=settings.debug)
 
@@ -39,11 +48,14 @@ def on_startup() -> None:
     starts. Safe to run every time — create_all is a no-op for tables
     that already exist.
     """
+    logger.info("Starting Knowledge AI backend...")
     create_tables()
+    logger.info("Database initialized successfully.")
 
 @app.get("/")
 def home():
     return {"message":"Welcome to KnowledgeHub Backend!"}
+
 @app.get("/health")
 def health_check() -> dict[str, str]:
     """

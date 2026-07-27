@@ -36,7 +36,7 @@ def store_embeddings(chunks, embeddings, filename):
 
     return len(ids)
 
-def retrieve_chunks(question: str,top_k: int = 2) -> QueryResult:
+def retrieve_chunks(question: str,top_k: int = 5) -> QueryResult:
     query_embedding = generate_embeddings([question])
     results = collection.query(
         query_embeddings=query_embedding,

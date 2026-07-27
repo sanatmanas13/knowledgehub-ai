@@ -7,6 +7,10 @@ def generate_answer(messages: list[dict]) -> str:
         response = chat(
             model=settings.ollama_model,
             messages=messages,
+            options={
+                "temperature": 0.2,
+                "num_predict": 1024
+            }
         )
 
         return response.message.content
