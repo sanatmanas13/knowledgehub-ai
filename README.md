@@ -248,6 +248,4 @@ The application generates a comprehensive answer by retrieving context related t
 
 **Sanat Manas**
 
-B.Tech Computer Science & Engineering (AI & ML)
-
 GitHub: https://github.com/sanatmanas13
